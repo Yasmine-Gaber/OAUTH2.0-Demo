@@ -7,6 +7,7 @@ http://unhandledexpression.com/2011/06/28/rails-and-oauth-plugin-part-2-the-cons
 
 It uses oauth-plugin gem, available here: https://github.com/pelle/oauth-plugin
 
+Presentation is also available at: http://www.slideshare.net/yasminegaber/oauth20-15028845
 
 ## Installation
 
