@@ -1,11 +1,23 @@
-https://github.com/pelle/oauth-plugin
+# OAUTH 2.0 Demo
+
+This project was created as part a presentation to demonstrate how OAUTh 2.0 protocol works.
+This is based on the following link:
 http://unhandledexpression.com/2011/06/02/rails-and-oauth-plugin-part-1-the-provider/
-
 http://unhandledexpression.com/2011/06/28/rails-and-oauth-plugin-part-2-the-consumer/
------------------------------------------------------------------
-rvm use 1.9.3-p0@rails3-0-7
+
+It uses oauth-plugin gem, available here: https://github.com/pelle/oauth-plugin
 
 
+## Installation
+
+Tested on Ubuntu OS, Rails 3.0.7 and Ruby 1.9.3
+Note: Rails 3.0.7 is the only version that worked without problems with oauth-plugin
+
+### Steps
+Starting from a working project, you can apply the following steps to enable OAUTH 2.0 protocol for it:
+
+#### For provider project:
+  ```
 1- add 'oauth-plugin' in gem file
 
 2- in console:
@@ -32,8 +44,9 @@ alias :login_required :authenticate_user!
 
 8- in views/welcome/index.html.erb
 uncomment the link
-
-==========================================================
+```
+#### For consumer project:
+```
 
 1- add 'oauth-plugin' in gem file
 
@@ -81,3 +94,5 @@ class WelcomeController < ApplicationController
     render :text => "private data: "+@token.get("/data/index").body
   end
 end
+  
+```
